@@ -31,7 +31,7 @@ const Chatbot: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3001/ask', {
+      const response = await axios.post(`${process.env.API_ENDPOINT}`, {
         question: inputValue,
       });
       const answer = response.data.answer;
