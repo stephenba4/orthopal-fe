@@ -15,8 +15,8 @@ const YoutubeCTA = (): ReactElement => {
   return (
     <div className="text-center">
       <p className="text-lg mb-4 mt-4 text-gray-500">
-        Don't forget to check out my YouTube videos and subscribe to my YouTube
-        channel for more amazing content!
+        Don{"'"}t forget to check out my YouTube videos and subscribe to my
+        YouTube channel for more amazing content!
       </p>
       <button
         onClick={handleClick}
