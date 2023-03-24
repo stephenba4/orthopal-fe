@@ -31,9 +31,12 @@ const Chatbot: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${process.env.API_ENDPOINT}`, {
-        question: inputValue,
-      });
+      const response = await axios.post(
+        `http://${process.env.API_ENDPOINT}/ask`,
+        {
+          question: inputValue,
+        }
+      );
       const answer = response.data.answer;
 
       const newBotMessage: Message = {
