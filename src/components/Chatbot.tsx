@@ -32,7 +32,7 @@ const Chatbot: React.FC = () => {
 
     try {
       const response = await axios.post(
-        `http://${process.env.API_ENDPOINT}/ask`,
+        `https://${process.env.API_ENDPOINT}/ask`,
         {
           question: inputValue,
         }
