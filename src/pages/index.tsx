@@ -1,15 +1,20 @@
 import type { NextPage } from 'next';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Chatbot from '../components/Chatbot';
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Head>
-        <title>Chatbot App</title>
+        <title>SoulGuru</title>
         <meta
           name="description"
-          content="SoulGuru: Your spiritual guide chatbot"
+          content="SoulGuru: Your Spiritual Guide Chatbot"
         />
       </Head>
 
