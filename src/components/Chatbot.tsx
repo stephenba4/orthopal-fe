@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import YouTubeCTA from '../components/YouTubeCTA';
 
 interface Message {
   id: number;
@@ -93,12 +94,12 @@ const Chatbot: React.FC = () => {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="flex-grow bg-white border border-gray-300 text-gray-400 rounded-lg p-2 mr-2"
+            className="flex-grow bg-white border border-gray-300 text-gray-500 rounded-lg p-2 mr-2"
             placeholder="Ask SoulGuru a question..."
           />
           <button
             type="submit"
-            className="bg-teal-500 text-white px-4 py-2 rounded-lg"
+            className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600"
           >
             Send
           </button>
@@ -109,6 +110,7 @@ const Chatbot: React.FC = () => {
             />
           )}
         </form>
+        <YouTubeCTA />
       </div>
     </div>
   );
