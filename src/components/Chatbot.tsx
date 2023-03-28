@@ -10,7 +10,13 @@ interface Message {
 }
 
 const Chatbot: React.FC = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: 0,
+      text: "Hello there! I'm Soulguru, your personal spiritual guide. I'm here to explore your beliefs and help you become more aware of them. To begin our journey together, just tell me about your current spiritual views or feel free to ask any questions you have. Let's dive in!",
+      sender: 'bot',
+    },
+  ]);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [messageId, setMessageId] = useState(0);
@@ -33,7 +39,9 @@ const Chatbot: React.FC = () => {
 
     try {
       const response = await axios.post(
-        `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
+        // to test api use this
+        'http://localhost:3001/ask',
+        // `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
         {
           question: inputValue,
         }

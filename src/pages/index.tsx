@@ -12,10 +12,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>SoulGuru</title>
-        <meta
-          name="description"
-          content="SoulGuru: Your Spiritual Guide Chatbot"
-        />
+        <meta name="description" content="SoulGuru: Unlock Your Inner Wisdom" />
       </Head>
 
       <main className="min-h-screen bg-gray-200 py-10">
@@ -24,7 +21,7 @@ const Home: NextPage = () => {
             SoulGuru
           </h1>
           <h2 className="text-lg font-medium mb-10 text-center text-gray-500">
-            Your ChatGPT Spiritual Guide
+            Unlock Your Inner Wisdom
           </h2>
           <Chatbot />
         </div>
