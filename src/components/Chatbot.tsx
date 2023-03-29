@@ -40,8 +40,8 @@ const Chatbot: React.FC = () => {
     try {
       const response = await axios.post(
         // to test api use this
-        'http://localhost:3001/ask',
-        // `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
+        // 'http://localhost:3001/ask',
+        `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
         {
           question: inputValue,
         }
