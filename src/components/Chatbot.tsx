@@ -39,9 +39,7 @@ const Chatbot: React.FC = () => {
 
     try {
       const response = await axios.post(
-        // to test api use this
-        // 'http://localhost:3001/ask',
-        `https://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
+        `http://${process.env.NEXT_PUBLIC_API_ENDPOINT}/ask`,
         {
           question: inputValue,
         }
@@ -77,9 +75,9 @@ const Chatbot: React.FC = () => {
     <div className="w-full max-w-lg mx-auto">
       <div className="bg-gray-100 p-4 rounded-lg shadow-md">
         <div className="h-64 overflow-y-auto mb-4">
-          {messages.map((message) => (
+          {messages.map((message, index) => (
             <div
-              key={message.id}
+              key={`${index}-${message.id}`}
               className={`${
                 message.sender === 'user' ? 'text-right' : 'text-left'
               } mb-2`}
