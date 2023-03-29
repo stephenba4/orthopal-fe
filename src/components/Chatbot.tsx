@@ -102,6 +102,7 @@ const Chatbot: React.FC = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="flex-grow bg-white border border-gray-300 text-gray-500 rounded-lg p-2 mr-2"
+            // TO DO: edit input placeholder message
             placeholder="Ask SoulGuru a question..."
           />
           <button
