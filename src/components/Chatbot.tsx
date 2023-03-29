@@ -13,6 +13,7 @@ const Chatbot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 0,
+      // TO DO: edit the initial message from the bot
       text: "Hello there! I'm Soulguru, your personal spiritual guide. I'm here to explore your beliefs and help you become more aware of them. To begin our journey together, just tell me about your current spiritual views or feel free to ask any questions you have. Let's dive in!",
       sender: 'bot',
     },
@@ -116,6 +117,7 @@ const Chatbot: React.FC = () => {
             />
           )}
         </form>
+        {/* TO DO: add or remove this YouTube call to action for Stephen's channel */}
         <YouTubeCTA />
       </div>
     </div>

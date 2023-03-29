@@ -12,11 +12,13 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>SoulGuru</title>
+        {/* TO DO: edit this meta tag */}
         <meta name="description" content="SoulGuru: Unlock Your Inner Wisdom" />
       </Head>
 
       <main className="min-h-screen bg-gray-200 py-10">
         <div className="container mx-auto">
+          {/* TO DO: edit the title and subtitle */}
           <h1 className="text-4xl font-bold mb-2 text-center text-teal-500">
             SoulGuru
           </h1>
