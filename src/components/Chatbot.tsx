@@ -14,7 +14,7 @@ const Chatbot: React.FC = () => {
     {
       id: 0,
       // TO DO: edit the initial message from the bot
-      text: "Hello there! I'm Soulguru, your personal spiritual guide. I'm here to explore your beliefs and help you become more aware of them. To begin our journey together, just tell me about your current spiritual views or feel free to ask any questions you have. Let's dive in!",
+      text: 'Hey there, welcome to BabyGenie, your friendly and fun parenting chatbot! 👶 Are you having any baby-related challenges or questions? 😊🍼',
       sender: 'bot',
     },
   ]);
@@ -74,8 +74,8 @@ const Chatbot: React.FC = () => {
 
   return (
     <div className="w-full max-w-lg mx-auto">
-      <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-        <div className="h-64 overflow-y-auto mb-4">
+      <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="h-64 overflow-y-auto mb-4 p-2 border border-pink-200 rounded-lg">
           {messages.map((message, index) => (
             <div
               key={`${index}-${message.id}`}
@@ -86,8 +86,8 @@ const Chatbot: React.FC = () => {
               <span
                 className={`${
                   message.sender === 'user'
-                    ? 'bg-teal-500 text-white'
-                    : 'bg-gray-300 text-black'
+                    ? 'bg-pink-500 text-white'
+                    : 'bg-pink-200 text-gray-700'
                 } inline-block px-3 py-1 rounded-lg text-sm`}
               >
                 {message.text}
@@ -96,30 +96,29 @@ const Chatbot: React.FC = () => {
           ))}
           <div ref={messagesEndRef}></div>
         </div>
-        <form onSubmit={handleMessageSubmit} className="flex">
+        <form onSubmit={handleMessageSubmit} className="flex items-center">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="flex-grow bg-white border border-gray-300 text-gray-500 rounded-lg p-2 mr-2"
-            // TO DO: edit input placeholder message
-            placeholder="Ask SoulGuru a question..."
+            className="flex-grow bg-white border border-pink-300 text-gray-500 rounded-lg p-2 mr-2"
+            placeholder="Ask BabyGenie a question..."
           />
           <button
             type="submit"
-            className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-600"
+            className="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600"
           >
             Send
           </button>
           {loading && (
             <AiOutlineLoading3Quarters
-              className="animate-spin ml-2 text-teal-500"
+              className="animate-spin ml-2 text-pink-500"
               size={24}
             />
           )}
         </form>
-        {/* TO DO: add or remove this YouTube call to action for Stephen's channel */}
-        <YouTubeCTA />
+        {/* Uncomment the following line if using the YouTube call-to-action */}
+        {/* <YouTubeCTA /> */}
       </div>
     </div>
   );

@@ -11,19 +11,22 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>SoulGuru</title>
-        {/* TO DO: edit this meta tag */}
-        <meta name="description" content="SoulGuru: Unlock Your Inner Wisdom" />
+        {/* TO DO: edit the title and meta data */}
+        <title>BabyGenie</title>
+        <meta
+          name="description"
+          content="BabyGenie: Baby Steps to Parenting Success"
+        />
       </Head>
 
-      <main className="min-h-screen bg-gray-200 py-10">
-        <div className="container mx-auto">
+      <main className="min-h-screen py-10 bg-pink-100">
+        <div className="container mx-auto px-4">
           {/* TO DO: edit the title and subtitle */}
-          <h1 className="text-4xl font-bold mb-2 text-center text-teal-500">
-            SoulGuru
+          <h1 className="text-4xl font-bold mb-4 text-center text-pink-500">
+            BabyGenie
           </h1>
-          <h2 className="text-lg font-medium mb-10 text-center text-gray-500">
-            Unlock Your Inner Wisdom
+          <h2 className="text-lg font-medium mb-10 text-center text-gray-700">
+            Baby Steps to Parenting Success
           </h2>
           <Chatbot />
         </div>
