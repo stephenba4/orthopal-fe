@@ -75,7 +75,7 @@ const Chatbot: React.FC = () => {
   return (
     <div className="w-full max-w-lg mx-auto">
       <div className="bg-white p-4 rounded-lg shadow-md">
-        <div className="h-64 overflow-y-auto mb-4 p-2 border border-pink-200 rounded-lg">
+        <div className="h-64 overflow-y-auto mb-4 rounded-lg">
           {messages.map((message, index) => (
             <div
               key={`${index}-${message.id}`}
