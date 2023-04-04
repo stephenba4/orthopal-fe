@@ -12,21 +12,24 @@ const Home: NextPage = () => {
     <div>
       <Head>
         {/* TO DO: edit the title and meta data */}
-        <title>BabyGenie</title>
-        <meta
-          name="description"
-          content="BabyGenie: Baby Steps to Parenting Success"
-        />
+        <title>OrthoPal</title>
+        <meta name="description" content="OrthoPal: Joint Care Made Easy" />
       </Head>
 
-      <main className="min-h-screen py-10 bg-pink-100">
+      <main
+        className="min-h-screen py-10"
+        style={{ backgroundColor: '#f0f4f8' }}
+      >
         <div className="container mx-auto px-4">
           {/* TO DO: edit the title and subtitle */}
-          <h1 className="text-4xl font-bold mb-4 text-center text-pink-500">
-            BabyGenie
+          <h1
+            className="text-4xl font-bold mb-4 text-center"
+            style={{ color: '#3182ce' }}
+          >
+            OrthoPal
           </h1>
           <h2 className="text-lg font-medium mb-10 text-center text-gray-700">
-            Baby Steps to Parenting Success
+            Joint Care Made Easy
           </h2>
           <Chatbot />
         </div>
